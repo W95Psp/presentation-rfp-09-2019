@@ -1,0 +1,26 @@
+section.fv
+  h1(style='width: 100%; text-align: center;') F* and recusivity
+  pre.language-fsharp(x=3, y=2.7, r=3, at-1='out').
+    let rec add (n m: ℕ)
+    = match n with
+    | 0 -> m
+    | _ -> 1 + add (n - 1) m
+  pre.language-fsharp(x=3, y=2.7, r=3, at-1='in', at-2='out').
+    let rec add (n m: ℕ)
+    = match n with
+    | 0 -> m
+    | _ -> 1 + add (n - 1) m
+    
+    assert(∀ n. add n 5 == n + 5)
+  pre.language-fsharp(x=3, y=2.7, r=3, at-2='in', at-4='moveUpABit persist-moveUpABit').
+    let rec add (n m: ℕ): (r: ℕ{n + m==r})
+    = match n with
+    | 0 -> m
+    | _ -> 1 + add (n - 1) m
+    
+    assert(∀ n. add n 5 == n + 5)
+  div(x=10.4, y=6.5, style='color: #e74c3c; font-size: 130%;', at-1='in', at-2='out') ✘
+  div(x=10.4, y=6.5, style='color: #2ecc71; font-size: 130%;', at-2='in', at-4='moveUpABit persist-moveUpABit') ✔
+  div(x=8.55, y=3.25, style='width: 412px; height: 64px; border: 2px solid gray;', at-2='in',  at-4='moveUpABit persist-moveUpABit')
+  div(x=0, y=7.5, r=0, style='width: 100%; text-align: center; font-size: 180%;', at-4='in') invariants imply annotations ☹
+

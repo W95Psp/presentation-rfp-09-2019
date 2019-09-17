@@ -1,0 +1,1 @@
+<svg x="12" y="3.93" width="300" height="100" style="transform: translate(-10px, 0);" n="arr"><defs><marker id="arrow" markerwidth="13" markerheight="13" refx="2" refy="6" orient="auto"><path d="M2,2 L2,11 L10,6 L2,2" style="fill:gray;"></path></marker></defs><path d="M10,0 L10,80" style="stroke:gray; stroke-width: 1.25px; fill: none; marker-end: url(#arrow);"></path></svg>

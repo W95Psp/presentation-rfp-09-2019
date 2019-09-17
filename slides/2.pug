@@ -1,0 +1,95 @@
+section.fv.fv-verasco
+  div.color-prop-background(n='black', x=0, y=0, b=0, r=0)
+  div(style='background: white;', n="white", x=7.4, y=-0.5, b=5.1, r=0)
+  h1(x=8, y=-0.5, n='fstar') F*
+  div(x=8, y=1.5, n='fstar-enum', style='font-size: 90%;').fstarEnum
+    div Type refinement
+    div OCaml syntax
+    div Proof assistant
+    div Effects
+  pre.language-fsharp(x=11.3, y=0.5, n="fstar-code", style='font-size: 20px;').
+    let rec add (n m: ℕ)
+      : Tot (r: ℕ{r == n + m})
+      = match n with
+      | 0 -> m
+      | 0 -> 1 + add (n - 1) m
+    
+    let rec fact (n: ℤ): Div ℕ
+      = if n=0 then 1
+        else n + fact (n - 1)    
+
+  h1(x=1, y=0, n='verasco') Verasco
+  div(x=1, y=2, style='font-size: 120%;')
+    div(at-1='in fadeIn faster', style='padding: 10px;') Abstract interpretor
+    div(at-2='in fadeIn faster', style='padding: 10px;') Formally verified in Coq
+    div(at-3='in fadeIn faster', style='padding: 10px;') Operates on 
+      span(at-3.1='out persist-display-none display-none') C 
+      span(at-3.1='in') (a subset of) C
+  
+  table.concrete(at-5='in bounceInLeft').vv
+    tr
+      td 5
+      td 6
+      td.vv
+      td.vv
+      td.vv ...
+      td ...
+    tr
+      td 25
+      td 36
+      td.vv
+      td.vv
+      td.vv ...
+      td ...
+    tr
+      td.err ERR
+      td -3
+      td.vv
+      td.vv
+      td.vv ...
+      td ...
+
+  table.concrete(at-5='out fadeOut faster')
+    tr(at-4.11='in')
+      td 5
+      td 6
+      td 7
+    tr(at-4.12='in')
+      td 25
+      td 36
+      td 49
+    tr(at-4.13='in')
+      td.err ERR
+      td -3
+      td -2
+
+  
+  table.abstract(at-5='in bounceInRight')
+    tr
+      td [5, ...]
+    tr
+      td [25, ...]
+    tr
+      td.err ERR
+
+  table.abstract(at-5='out fadeOut faster')
+    tr(at-4.21='in')
+      td i ∈ [5, 7]
+    tr(at-4.22='in')
+      td i ∈ [25, 49]
+    tr(at-4.23='in')
+      td.err ERR
+
+  .c(x=3.4, y=7.9, at-4.11='in', style='font-size: 70%; font-variant: small-caps;') concrete interpretation
+  .c(x=14, y=7.9, at-4.11='in', style='font-size: 70%; font-variant: small-caps;') abstract interpretation
+      
+
+  pre.language-c(x=6.5, y=5.2, at-4='in').
+    i = random(5, 7) 
+    i = i * i
+    i = i / (25 - i)
+  pre.language-c(x=6, y=5.2, at-5='in').
+    i = random(0, INT_MAX)
+    i = i * i
+    i = i / (25 - i)
+

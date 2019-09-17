@@ -1,0 +1,170 @@
+body > section
+  mycolor = #eeedef
+  font-size 40px
+  font-weight 300
+  .white-prop-background
+    background white
+    fill white
+  .color-prop-background
+    background mycolor
+    fill mycolor
+  .color-prop-color
+    color mycolor
+  .display-none
+    display none
+  .good
+    color #375225
+  .bad
+    color #814012
+  .moveDown
+    transform translate(0, 250px) scale(0.5)
+    transition transform 100ms linear
+  .moveUpABit
+    transform translate(0, -40px)
+    transition transform 100ms linear
+  h1
+    font-weight 400
+  b
+    font-weight 400
+  
+  .invariant
+    opacity 1
+  .makesSmaller
+    transition all 3000ms ease-out
+    transform translate(-50%, 7px) scale(0.9)!important
+    color #011301
+  .moveTo0
+    transition all 1700ms ease-out
+    transition-delay 400ms
+    transform translate(440px, 70px) rotate(17deg)
+    opacity 0
+  .moveTo1
+    transition all 1700ms ease-out
+    transition-delay 0s
+    transform translate(440px, -30px) rotate(4deg)
+    opacity 0
+  .moveTo2
+    transition all 1700ms ease-out
+    transition-delay 800ms
+    transform translate(440px, -100px) rotate(-10deg)
+    opacity 0
+  .moveTo3
+    transition all 1700ms ease-out
+    transition-delay 1000ms
+    transform translate(440px, 0px) rotate(-17deg)
+    opacity 0
+  .arrow
+    width 2px
+    height 80px
+    position absolute
+    background gray
+    &:after
+      content '►'
+      color gray
+      font-family arial
+      position absolute
+      font-size 70%
+      bottom -11px
+      left -13px
+      transform: rotate(90deg)      
+  &.intro
+    h1
+      background black
+      color white
+      padding 20px
+      font-size 90px
+      font-weight 300
+      text-transform uppercase
+      & > div > span:first-child
+        display inline-block
+        width 500px
+        text-align right
+      & > div > span:last-child
+        font-weight 400
+    h2
+      font-weight 300
+      font-style italic
+      font-size 58px
+    aside
+      font-size 28px
+      text-align right
+      div:nth-child(1)
+        font-size 32px
+      div:nth-child(2)
+        font-style italic
+        padding-bottom 30px
+  &.fv.fv-verasco
+    table
+      position absolute
+      font-size 38px
+      font-family Roboto Light
+      border-collapse separate
+      border-spacing 16px
+      td
+        &.err
+          background #c0392b
+          color white
+        padding 2px
+        box-shadow 0 0 15px #dedede
+        border-radius 6px
+        background white
+        text-align center
+      &.abstract
+        top 566px
+        left 1280px
+        td
+          width 200px
+      &.concrete
+        top 566px
+        left 150px
+        td
+          width 100px
+      &.concrete.vv
+        top 566px
+        left 130px
+      td:nth-child(6)
+        left -106px * 3
+        top 0
+      *.vv
+        position relative
+        &:nth-child(5)
+          left -106px * 3
+          top 12px
+        &:nth-child(4)
+          left -106px * 2
+          top 8px
+        &:nth-child(3)
+          left -106px
+          top 4px
+  &.fv
+    h1
+      text-transform uppercase
+      font-size 90px
+  .c
+    width 500px
+    transform translate(-50%, 0)
+    text-align center
+  .ll
+    color #34495e
+    &:after
+      content: '∈'
+      position absolute
+      bottom -74px
+      opacity 0.6
+      font-size 140%
+      left 47.5%
+      transform rotate(90deg)
+    span
+      i
+        text-align center
+        width 30px
+        display inline-block
+        font-style normal
+      display block
+      font-size 80%
+      &:nth-child(7), &:nth-child(1)
+        opacity 0.2
+      &:nth-child(6), &:nth-child(2)
+        opacity 0.4
+      &:nth-child(5), &:nth-child(3)
+        opacity 0.7

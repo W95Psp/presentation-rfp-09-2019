@@ -1,0 +1,75 @@
+body
+  position absolute
+  left 0px
+  font-family Roboto
+  top 0px
+  width 100%
+  height 100%
+  overflow hidden
+  margin 0
+  padding 0
+  background black
+  & > section.active
+    visibility visible
+  & > section.active *
+    visibility visible
+  & > section *.hiddenIn, & > section *.hiddenIn *, & > section *.hidden, & > section *.hidden *
+    visibility hidden
+  & > section *.hidden-opacity
+    transition opacity 400ms ease-out
+    opacity 0
+  & > section
+    visibility hidden
+  & > section *
+    position relative
+    visibility hidden
+  & > section, .fake-section
+    position absolute
+    display block
+    overflow hidden
+    left 50%
+    top 50%
+    transform translate(-50%, -50%) scale(1)
+    width 1600px
+    height 900px
+    margin 0
+    padding 0
+  &.dev-mode
+    .grid
+      pointer-events none
+      z-index 8
+      div
+        position absolute
+        border-left 1px dashed #dcdcdc
+        border-top 1px dashed #dcdcdc
+      div span.x:hover
+        opacity 0.8
+      div span.x
+        opacity 0.4
+    // & > section > *:hover:before
+    //   content ''
+    //   position absolute
+    //   top -1px
+    //   left -1px
+    //   bottom -1px
+    //   right -1px
+    //   border 1px solid gray
+    // & > section > * *:hover:before
+    //   content ''
+    //   position absolute
+    //   top -1px
+    //   left -1px
+    //   bottom -1px
+    //   right -1px
+    //   border 1px solid lighten(red, 60%)
+
+.animated.delay-0.2s {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}

@@ -1,0 +1,73 @@
+body {
+  position: absolute;
+  left: 0px;
+  font-family: Roboto;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+body > section.active {
+  visibility: visible;
+}
+body > section.active * {
+  visibility: visible;
+}
+body > section *.hiddenIn,
+body > section *.hiddenIn *,
+body > section *.hidden,
+body > section *.hidden * {
+  visibility: hidden;
+}
+body > section *.hidden-opacity {
+  transition: opacity 400ms ease-out;
+  opacity: 0;
+}
+body > section {
+  visibility: hidden;
+}
+body > section * {
+  position: relative;
+  visibility: hidden;
+}
+body > section,
+body .fake-section {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 1600px;
+  height: 900px;
+  margin: 0;
+  padding: 0;
+}
+body.dev-mode .grid {
+  pointer-events: none;
+  z-index: 8;
+}
+body.dev-mode .grid div {
+  position: absolute;
+  border-left: 1px dashed #dcdcdc;
+  border-top: 1px dashed #dcdcdc;
+}
+body.dev-mode .grid div span.x:hover {
+  opacity: 0.8;
+}
+body.dev-mode .grid div span.x {
+  opacity: 0.4;
+}
+.animated.delay-0.2s {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}

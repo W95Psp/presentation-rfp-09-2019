@@ -1,0 +1,32 @@
+mixin bolt(size, x, y, r, sw, color)
+  svg(x=x, y=y, version='1.0' xmlns='http://www.w3.org/2000/svg' width=size+'px' height=size+'px' viewbox='0 0 1230.000000 1280.000000', style='transform: scale('+sw+', 1) rotate('+r+');', preserveaspectratio='xMidYMid meet')
+    g(transform='translate(0.000000,1280.000000) scale(0.100000,-0.100000)' class=color stroke='none')
+      path(d='M11830 12775 c-195 -7 -517 -18 -715 -24 -198 -6 -495 -16 -660 -21 -165 -5 -453 -14 -640 -20 -187 -6 -468 -15 -625 -20 -157 -5 -469 -14 -695    -20 -225 -7 -431 -15 -457 -18 -46 -7 -61 -21 -1190 -1117 -3872 -3761 -3960    -3848 -3947 -3856 8 -5 33 -9 57 -9 53 0 54 -12 1 -66 l-41 -42 63 -6 c35 -3    154 -8 264 -11 110 -3 326 -10 480 -15 154 -6 561 -19 905 -30 805 -25 870    -29 870 -44 0 -7 -954 -917 -2121 -2022 -1892 -1792 -2117 -2009 -2092 -2012    63 -6 93 -14 93 -24 0 -7 -21 -31 -47 -54 l-48 -42 155 -6 c85 -3 463 -11 840    -17 383 -6 689 -15 695 -20 6 -6 -8 -27 -36 -57 -285 -295 -2856 -3009 -2863    -3020 -5 -9 39 10 97 41 59 32 109 57 112 57 16 0 0 -30 -31 -61 -20 -18 -63    -65 -97 -103 l-61 -69 54 28 c30 15 658 348 1395 740 737 392 2362 1256 3610    1920 1249 663 2274 1210 2280 1216 5 5 -29 9 -93 9 -58 0 -102 4 -102 9 0 6    38 31 86 57 47 25 83 48 81 50 -2 3 -400 0 -883 -5 -1194 -14 -1632 -17 -1638    -11 -3 3 -2 10 2 16 4 6 1215 930 2692 2053 1477 1124 2694 2052 2705 2062 19    19 18 19 -52 19 -40 0 -75 4 -78 10 -3 5 22 31 56 57 l61 48 -1038 6 c-572 3    -1209 7 -1417 8 -321 1 -378 3 -375 15 2 8 980 884 2173 1947 2803 2496 2636    2347 2635 2356 0 4 -25 6 -54 5 -74 -5 -79 10 -22 67 50 51 55 62 29 60 -10    -1 -178 -8 -373 -14z')
+
+section.fv.comp-verasco-fstar
+  div.color-prop-background(n='black', x=0, y=0, b=0, r=8)
+  div(style='background: white;', n='white', x=8, y=0, b=0, r=0)
+  h1(x=9.5, y=0, n='fstar') F*
+  h1(x=1, y=0, n='verasco') Verasco
+  
+  div(x=1, y=4, style='width: 35%;', at-1.2='in slideInLeft', at-1.5='out zoomOutLeft faster')
+    img(x=0, y=0, style='width: 100%;', src='verasco-top.svg')
+    img(x=0, y=0.8, style='width: 100%;', src='verasco-bot.svg')
+
+  div(at-0='in fadeIn faster')
+    +bolt(600, 5, 1.4, '-30deg', 0.6, "white-prop-background")
+    +bolt(600, 5.1, 1.5, '-30deg', 0.6, "color-prop-background")
+  div(x=1, y=2, style='font-size: 130%;', at-1='in').good
+    div Multiple abstract domains
+    div Infer static properties
+  div(x=1, y=6, style='font-size: 130%;', at-1.5='in slideInUp faster').bad
+    div Expressivity
+    div Composability
+  div(x=9.5, y=2, style='font-size: 130%;', at-2='in').good
+    div Weakest preconditions
+    div Backed by SMT solver
+    div Very expressive
+  div(x=9.5, y=6, style='font-size: 130%;', at-2.5='in').bad
+    div Hand crafter proofs
+    div <span style='letter-spacing: -2px;'>Recursion</i> need <span style='letter-spacing: -2px;'>annotations</span>
+

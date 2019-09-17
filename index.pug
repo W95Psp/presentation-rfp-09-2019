@@ -1,0 +1,31 @@
+doctype html
+html
+  script(src='ramjet.js')
+  script(src='script.js')
+  link(rel="stylesheet", href="style.css") 
+  link(rel="stylesheet", href="animate.css")
+  link(rel="stylesheet", href="riotfp.css")
+  link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css", integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG", crossorigin="anonymous")
+  script(defer, src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js", integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1", crossorigin="anonymous")
+  script(defer, src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js", integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI", crossorigin="anonymous", onload="renderMathInElement(document.body);")
+  link(href="prism.css", rel="stylesheet")
+  script(src="prism.js")
+  link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700|Permanent+Marker&display=swap" rel="stylesheet">
+  body.dev-mode
+    .fake-section(style='background-color: white;')
+    #grid.grid.fake-section
+    include slides/0.pug
+    include slides/1.pug
+    include slides/2.pug
+    include slides/3.pug
+    include slides/4.pug
+    include slides/5.pug
+    include slides/6.pug
+    section(style='background: white;')
+      h1(x=0, r=0, y=2.5, style='text-align: center; font-weight: 300; font-size: 100px;') Thanks for listening!
+      h1(x=0, r=0, y=4, style='text-align: center; font-weight: 300; font-size: 80px;') Any question?
+      div(b=0.15, x=0, r=0, style='text-align: center; font-size: 80%; font-family: monospace; color: gray;') tinyurl.com/0919-fstar-verasco
+    #pagenum.fake-section
+      div(style='position: absolute; right: 0px; bottom: 0px; font-size: 30px; padding: 20px; width: 100px; text-align: right; height: 28px;')
