@@ -129,6 +129,10 @@ document.addEventListener('keyup', e => {
 	document.getElementById('grid').style.visibility = 'hidden';
 });
 
+document.addEventListener('click', e => {
+    nextMove();
+});
+
 
 let eventTElem = (n, t) => {
     let l = n.getAttribute('at-'+t).split(' ').map(x => x.trim());
