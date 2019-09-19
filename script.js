@@ -72,9 +72,7 @@ let autoResize = () => {
     let ry = window.innerHeight / elem.offsetHeight;
     let r = Math.min(rx, ry);
 
-    // let rule = [...document.styleSheets].map(x => [...x.rules]).flat()
-    // 	.find( x => x.selectorText == 'body > section, body .fake-section');
-    // rule.style.transform = rule.style.transform.replace(/scale\([\d.]+\)/, 'scale('+r+')');
+    document.body.style.zoom = r;
 };
 
 window.addEventListener("resize", autoResize);
@@ -197,6 +195,8 @@ window.addEventListener('load', () => {
     [...$$('section > .dummyTopEl')].map(x => x.remove());
 
     $$('pre').map(x => Prism.highlightElement(x));
+
+    setTimeout(autoResize(),100);
 });
 
 let setAnimNum = (section, animNum) => {
